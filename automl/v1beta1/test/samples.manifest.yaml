@@ -1,0 +1,43 @@
+type: manifest/samples
+schema_version: 3
+base: &common
+  chdir: '{@manifest_dir}/../..'
+  bin: 'node'
+  basepath: '.'
+samples:
+- <<: *common
+  path: '{basepath}/v1beta1/automl_video_object_tracking_batch_predict.js'
+  sample: 'automl_video_object_tracking_batch_predict'
+- <<: *common
+  path: '{basepath}/v1beta1/automl_video_object_tracking_create_dataset.js'
+  sample: 'automl_video_object_tracking_create_dataset'
+- <<: *common
+  path: '{basepath}/v1beta1/automl_video_object_tracking_create_model.js'
+  sample: 'automl_video_object_tracking_create_model'
+- <<: *common
+  path: '{basepath}/v1beta1/automl_video_object_tracking_delete_dataset.js'
+  sample: 'automl_video_object_tracking_delete_dataset'
+- <<: *common
+  path: '{basepath}/v1beta1/automl_video_object_tracking_delete_model.js'
+  sample: 'automl_video_object_tracking_delete_model'
+- <<: *common
+  path: '{basepath}/v1beta1/automl_video_object_tracking_get_dataset.js'
+  sample: 'automl_video_object_tracking_get_dataset'
+- <<: *common
+  path: '{basepath}/v1beta1/automl_video_object_tracking_get_model.js'
+  sample: 'automl_video_object_tracking_get_model'
+- <<: *common
+  path: '{basepath}/v1beta1/automl_video_object_tracking_get_model_evaluation.js'
+  sample: 'automl_video_object_tracking_get_model_evaluation'
+- <<: *common
+  path: '{basepath}/v1beta1/automl_video_object_tracking_import_data.js'
+  sample: 'automl_video_object_tracking_import_data'
+- <<: *common
+  path: '{basepath}/v1beta1/automl_video_object_tracking_list_datasets.js'
+  sample: 'automl_video_object_tracking_list_datasets'
+- <<: *common
+  path: '{basepath}/v1beta1/automl_video_object_tracking_list_model_evaluations.js'
+  sample: 'automl_video_object_tracking_list_model_evaluations'
+- <<: *common
+  path: '{basepath}/v1beta1/automl_video_object_tracking_list_models.js'
+  sample: 'automl_video_object_tracking_list_models'

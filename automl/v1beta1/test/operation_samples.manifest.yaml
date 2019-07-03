@@ -1,0 +1,22 @@
+type: manifest/samples
+schema_version: 3
+base: &common
+  chdir: '{@manifest_dir}/../..'
+  bin: 'python3'
+  basepath: '.'
+samples:
+- <<: *common
+  path: '{basepath}/v1beta1/automl_cancel_operation.py'
+  sample: 'automl_cancel_operation'
+- <<: *common
+  path: '{basepath}/v1beta1/automl_get_operation.py'
+  sample: 'automl_get_operation'
+- <<: *common
+  path: '{basepath}/v1beta1/automl_list_operations.py'
+  sample: 'automl_list_operations'
+- <<: *common
+  path: '{basepath}/v1beta1/automl_wait_for_import_data_operation.py'
+  sample: 'automl_wait_for_import_data_operation'
+- <<: *common
+  path: '{basepath}/v1beta1/automl_wait_for_model_create_operation.py'
+  sample: 'automl_wait_for_model_create_operation'
