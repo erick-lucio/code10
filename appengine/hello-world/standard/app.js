@@ -33,7 +33,18 @@ const connection = mysql.createPool({
 
 
 app.get('/', (req, res) => {
- 
+ connection.getConnection(function (err, connection) {
+
+    // Executing the MySQL query 
+    connection.query('select temp from temperature where  data = (select max(data) from temperature)', function (error, results, fields) {
+      // If some error occurs, we throw an error.
+      if (error) throw error;
+
+      // Getting the 'response' from the database and sending it to our route. This is were the data is.
+      res.send(results)
+     // res.status(200).send('Hello, world!');
+    });
+  });
     
   
  
