@@ -13,18 +13,30 @@
  * limitations under the License.
  */
 
+
 'use strict';
-
 // [START gae_node_request_example]
-const express = require('express');
 
+const bodyParser = require('body-parser');
+const mysql = require('mysql');
 const app = express();
+const cors = require('cors');
+
+
+app.use(cors());
+const connection = mysql.createPool({
+  host     : '35.198.26.170', // Your connection adress (localhost).
+  user     : 'arduino',     // Your database's username.
+  password : 'erickgostoso',        // Your database's password.
+  database : 'banco1'   // Your database's name.
+});
+
 
 app.get('/', (req, res) => {
-  res
-    .status(200)
-    .send('Hello, world!')
-    .end();
+ 
+    
+  
+ 
 });
 
 // Start the server
