@@ -16,7 +16,7 @@
 
 'use strict';
 // [START gae_node_request_example]
-
+const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const app = express();
